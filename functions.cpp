@@ -75,13 +75,13 @@ void input_key()
 		// _getch has no buffer (i.e. immediately returns character without pressing enter)
 		switch (_getch()) {
 		case 'a': dir = direction::left;
-				  break;
+			  break;
 		case 'd': dir = direction::right;
-				  break;
+			  break;
 		case 'w': dir = direction::up;
-				  break;
+			  break;
 		case 's': dir = direction::down;
-				  break;
+			  break;
 		}
 	}
 }
@@ -99,13 +99,13 @@ void logic()
 	// Move [BLANK] depending on dir (enum)
 	switch (dir) {
 	case direction::left :  x--;
-							break;
+				break;
 	case direction::right : x++;
-							break;
-	case direction::up :		y--;
-							break;
+				break;
+	case direction::up :	y--;
+				break;
 	case direction::down :  y++;
-							break;
+				break;
 	}
 
 	// Collsion (wall and tail)
